@@ -185,9 +185,21 @@
 
 
   <!-- ================= HERO SECTION ================= -->
-  <section id="hero" class="relative min-h-[95vh] flex items-center bg-[#0B3C5D] pt-40 pb-20 overflow-hidden">
-    <!-- Gradient Sky Background Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/90 to-brand-sky/60 z-0"></div>
+  <section id="hero" class="relative min-h-[90vh] sm:min-h-[95vh] lg:min-h-[100vh] flex items-center bg-[#0B3C5D] pt-44 pb-32 overflow-hidden">
+    <!-- Full-bleed background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="hero_turf.png" alt="Eco friendly synthetic sod grass installation" class="w-full h-full object-cover object-center" />
+      <!-- Dark Blue gradient overlay for legibility -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0B3C5D]/95 via-[#0B3C5D]/85 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B3C5D]/90 via-[#0B3C5D]/60 to-transparent"></div>
+    </div>
+
+    <!-- Diagonal Bottom Divider -->
+    <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[50px] sm:h-[80px] text-white fill-current">
+        <path d="M0,30 L1200,90 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
     
     <div class="max-w-7xl mx-auto px-5 sm:px-10 relative z-10 w-full text-center">
       
@@ -220,7 +232,7 @@
       </div>
 
       <!-- Headline -->
-      <h1 class="text-white font-heading font-black text-4xl sm:text-5xl lg:text-7xl leading-tight uppercase max-w-5xl mx-auto mb-6">
+      <h1 class="text-white font-heading font-black text-4xl sm:text-5xl lg:text-[68px] leading-tight uppercase max-w-5xl mx-auto mb-6">
         Premium Turf Solutions For Texas Homes And Businesses
       </h1>
 
@@ -241,7 +253,7 @@
       </div>
 
       <!-- Buttons -->
-      <div class="flex flex-wrap justify-center gap-4 mb-16">
+      <div class="flex flex-wrap justify-center gap-4">
         <a href="#contact" class="px-8 py-4 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-full flex items-center justify-center gap-2 shadow-lg transition-colors">
           Get Your Free Estimate
           <i class="fa-solid fa-arrow-right text-xs"></i>
@@ -250,11 +262,6 @@
           Talk To An Expert Now
           <i class="fa-solid fa-phone text-xs"></i>
         </a>
-      </div>
-
-      <!-- Hero Base image with wavy divider -->
-      <div class="max-w-4xl mx-auto rounded-[30px] overflow-hidden border-4 border-white/10 shadow-2xl relative">
-        <img src="hero_turf.png" alt="Eco friendly synthetic sod grass installation" class="w-full object-cover h-[350px] sm:h-[450px]" />
       </div>
 
     </div>
