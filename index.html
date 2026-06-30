@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logoipsum - Top-Quality Artificial Grass Installation</title>
+  <meta name="description" content="Transform your outdoor space with our expert artificial grass installation. Our skilled team ensures precision and quality." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome v6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              forest: '#132A1C', // Dark Green
+              green: '#1E653A',  // Primary Theme Green
+              sage: '#8FBC8F',
+              accentGreen: '#39A96B',
+              lightGray: '#F4F6F4',
+              bodyBg: '#FAF9F6',
+              gold: '#F59E0B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333333;
+      background-color: #FAF9F6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    /* Curved bottom-right banner styling */
+    .hero-banner-curved {
+      border-bottom-right-radius: 120px;
+    }
+    @media (max-width: 768px) {
+      .hero-banner-curved {
+        border-bottom-right-radius: 60px;
+      }
+    }
+
+    /* Scroll Navigation Effects */
+    #main-header {
+      transition: all 0.4s ease;
+    }
+    #main-header.scrolled {
+      background: rgba(19, 42, 28, 0.96) !important;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+      padding: 12px 0;
+    }
+
+    /* Dot patterns */
+    .dots-pattern {
+      background-image: radial-gradient(#d1d5db 1.5px, transparent 1.5px);
+      background-size: 16px 16px;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #132A1C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E653A;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F59E0B;
+    }
+  </style>
+</head>
+<body class="bg-brand-bodyBg">
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-5 transition-all duration-300" style="background: rgba(19, 42, 28, 0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 flex justify-between items-center">
+      
+      <!-- Logo (Logoipsum style) -->
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-lg bg-brand-green flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <i class="fa-solid fa-leaf text-white text-base"></i>
+        </div>
+        <span class="text-white font-heading font-extrabold text-xl tracking-tight leading-none">Logoipsum</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#" class="text-white hover:text-brand-green font-medium text-sm transition-colors duration-200">Home</a>
+        <a href="#about" class="text-white/80 hover:text-brand-green font-medium text-sm transition-colors duration-200">About Us</a>
+        <a href="#services" class="text-white/80 hover:text-brand-green font-medium text-sm transition-colors duration-200">Services</a>
+        <a href="#features" class="text-white/80 hover:text-brand-green font-medium text-sm transition-colors duration-200">Features</a>
+        <a href="#testimonials" class="text-white/80 hover:text-brand-green font-medium text-sm transition-colors duration-200">Testimonials</a>
+      </nav>
+
+      <!-- CTA Contact Box -->
+      <div class="flex items-center gap-4">
+        <!-- Phone Badge -->
+        <a href="tel:+918005815515" class="flex items-center gap-2 bg-brand-green px-4 py-2 rounded-full hover:bg-brand-green/95 transition-all duration-300 text-white font-heading font-bold text-xs sm:text-sm">
+          <i class="fa-solid fa-phone text-xs"></i>
+          +91 80058-15515
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-xl bg-white/10 flex flex-col justify-center items-center gap-1.5 border border-white/10" aria-label="Toggle Menu">
+          <span class="w-4 h-0.5 bg-white transition-transform duration-300" id="hamburger-top"></span>
+          <span class="w-4 h-0.5 bg-white transition-opacity duration-300" id="hamburger-mid"></span>
+          <span class="w-4 h-0.5 bg-white transition-transform duration-300" id="hamburger-bottom"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-y-0 right-0 z-40 w-80 bg-brand-forest shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-8 pt-24 border-l border-white/5">
+    <div class="flex flex-col gap-6">
+      <a href="#" class="text-white text-lg font-heading font-bold hover:text-brand-green transition-colors" onclick="toggleDrawer()">Home</a>
+      <a href="#about" class="text-white/80 text-lg font-heading font-bold hover:text-brand-green transition-colors" onclick="toggleDrawer()">About Us</a>
+      <a href="#services" class="text-white/80 text-lg font-heading font-bold hover:text-brand-green transition-colors" onclick="toggleDrawer()">Services</a>
+      <a href="#features" class="text-white/80 text-lg font-heading font-bold hover:text-brand-green transition-colors" onclick="toggleDrawer()">Features</a>
+      <a href="#testimonials" class="text-white/80 text-lg font-heading font-bold hover:text-brand-green transition-colors" onclick="toggleDrawer()">Testimonials</a>
+    </div>
+    <div class="flex flex-col gap-4 border-t border-white/10 pt-6">
+      <span class="text-xs text-white/50 block font-semibold">CALL US ANYTIME</span>
+      <a href="tel:+918005815515" class="text-white font-heading font-bold text-lg hover:text-brand-green transition-colors">+91 80058-15515</a>
+    </div>
+  </div>
+  <!-- Drawer Overlay -->
+  <div id="drawer-overlay" class="fixed inset-0 z-30 bg-black/50 hidden backdrop-blur-sm" onclick="toggleDrawer()"></div>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="relative bg-brand-forest text-white hero-banner-curved pt-32 pb-24 lg:pb-36 z-10 overflow-hidden">
+    <!-- Green Grassy Blurred Background Pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-green/30 via-brand-forest/98 to-brand-forest z-0"></div>
+    
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 grid lg:grid-cols-12 gap-16 relative z-10 w-full items-center">
+      
+      <!-- Hero Left Copy -->
+      <div class="lg:col-span-7 flex flex-col items-start text-left">
+        
+        <!-- Headline -->
+        <h1 class="text-white font-heading font-extrabold text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] tracking-tight mb-6">
+          Top-Quality <span class="text-brand-accentGreen">Artificial Grass</span> Installation
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-white/70 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+          Transform your outdoor space with our expert artificial grass installation. Our skilled team ensures precision and quality, delivering a lush, realistic lawn that requires minimal maintenance and looks perfect year-round.
+        </p>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-3 gap-6 sm:gap-8 mb-10 w-full max-w-lg">
+          <div>
+            <span class="text-brand-accentGreen font-heading font-extrabold text-2xl sm:text-3xl block leading-none mb-1">10+</span>
+            <span class="text-xs text-white/50 font-medium">Year of experience</span>
+          </div>
+          <div>
+            <span class="text-brand-accentGreen font-heading font-extrabold text-2xl sm:text-3xl block leading-none mb-1">300+</span>
+            <span class="text-xs text-white/50 font-medium">Completed Projects</span>
+          </div>
+          <div>
+            <span class="text-brand-accentGreen font-heading font-extrabold text-2xl sm:text-3xl block leading-none mb-1">14+</span>
+            <span class="text-xs text-white/50 font-medium">Expert Installers</span>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4 w-full sm:w-auto">
+          <a href="#about" class="w-full sm:w-auto px-7 py-3.5 bg-brand-green hover:bg-brand-accentGreen text-white font-heading font-bold rounded-full flex items-center justify-center gap-2 shadow-lg transition-colors">
+            Read More
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <a href="#services" class="w-full sm:w-auto px-7 py-3.5 border border-white/20 hover:border-white/50 hover:bg-white/5 text-white font-heading font-bold rounded-full flex items-center justify-center gap-2 transition-all">
+            Our Services
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Hero Right: Floating Quote Form -->
+      <div class="lg:col-span-5 w-full flex justify-center lg:justify-end relative">
+        <div class="w-full max-w-[430px] bg-white p-8 rounded-3xl shadow-2xl border border-slate-100/50 text-slate-800">
+          
+          <h3 class="font-heading font-extrabold text-2xl text-slate-800 mb-6 tracking-tight text-center">Get A Quote</h3>
+          
+          <form id="quote-form" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+            <div>
+              <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/10 text-sm transition-all" placeholder="John Wick" />
+            </div>
+            <div>
+              <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/10 text-sm transition-all" placeholder="Email" />
+            </div>
+            <div>
+              <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/10 text-sm transition-all" placeholder="Phone No." />
+            </div>
+            <div>
+              <select id="service-type" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/10 text-sm transition-all bg-white">
+                <option value="" disabled selected>Service type</option>
+                <option value="residential">Residential Lawn</option>
+                <option value="pet">Pet Safe Turf</option>
+                <option value="golf">Putting Greens</option>
+                <option value="commercial">Commercial Turf</option>
+              </select>
+            </div>
+            <div>
+              <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/10 text-sm transition-all resize-none" placeholder="Write Message"></textarea>
+            </div>
+            <button type="submit" id="quote-submit-btn" class="w-full py-3.5 bg-brand-green hover:bg-brand-accentGreen text-white font-heading font-extrabold rounded-xl transition-all shadow-md">
+              Get a quote
+            </button>
+          </form>
+
+          <!-- Form Success Message -->
+          <div id="quote-success" class="hidden text-center py-8">
+            <div class="w-12 h-12 rounded-full bg-brand-green text-white flex items-center justify-center text-2xl mx-auto mb-4">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 class="font-heading font-bold text-lg mb-2">Request Received!</h4>
+            <p class="text-slate-500 text-xs">We will contact you shortly with a personalized quote.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= ABOUT US SECTION ================= -->
+  <section id="about" class="py-24 bg-brand-cream relative overflow-hidden">
+    <!-- Geometric decorative elements -->
+    <div class="absolute top-[20%] right-[-5%] w-40 h-40 dots-pattern opacity-40 z-0"></div>
+    
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 grid lg:grid-cols-12 gap-16 relative z-10 items-center">
+      
+      <!-- Left: Overlapping rounded images -->
+      <div class="lg:col-span-6 relative flex items-center justify-center min-h-[450px]">
+        <!-- Main Portrait Image -->
+        <div class="w-[70%] h-[380px] sm:h-[450px] rounded-[30px] overflow-hidden shadow-xl border border-slate-200/50">
+          <img src="about_prep.png" alt="Base prep excavation for artificial grass" class="w-full h-full object-cover" />
+        </div>
+        
+        <!-- Overlapping Landscape Image -->
+        <div class="absolute bottom-4 right-4 w-[60%] h-[200px] sm:h-[240px] rounded-[30px] overflow-hidden shadow-2xl border-8 border-brand-cream z-10">
+          <img src="blog_lawn.png" alt="Finished artificial grass lawn residential" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="lg:col-span-6 flex flex-col items-start">
+        <h2 class="text-brand-forest font-heading font-extrabold text-3xl sm:text-4xl lg:text-[45px] leading-tight mb-6">
+          About Us
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+          Lorem ipsum dolor sit amet consectetur. Enim non dignissim libero amet varius tellus nec. Tempus sem fusce amet vitae aliquet tristique nunc consequat eu. Arcu rhoncus mauris suspendisse egestas auctor tortor.
+        </p>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+          Lorem ipsum dolor sit amet consectetur. Enim non dignissim libero amet varius tellus nec. Tempus sem fusce amet vitae aliquet tristique nunc consequat eu. Arcu rhoncus mauris suspendisse egestas auctor tortor.
+        </p>
+        <a href="#services" class="px-7 py-3.5 bg-brand-green hover:bg-brand-accentGreen text-white font-heading font-bold rounded-full flex items-center justify-center gap-2 shadow-lg transition-colors">
+          Read More
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= WHY CHOOSE US SECTION ================= -->
+  <section id="features" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      
+      <!-- Heading & Navigation -->
+      <div class="flex justify-between items-end mb-16">
+        <h2 class="text-brand-forest font-heading font-extrabold text-3xl sm:text-4xl lg:text-[45px] leading-tight">
+          Why Choose Us
+        </h2>
+        <!-- Prev/Next Slider buttons -->
+        <div class="flex gap-3">
+          <button id="feat-prev" class="w-10 h-10 rounded-full border border-slate-200 hover:border-brand-green text-slate-600 hover:text-brand-green flex items-center justify-center transition-all bg-white" aria-label="Previous feature">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="feat-next" class="w-10 h-10 rounded-full bg-brand-green hover:bg-brand-accentGreen text-white flex items-center justify-center shadow-md transition-all" aria-label="Next feature">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Features Cards Slider -->
+      <div class="overflow-hidden relative w-full">
+        <div id="features-slider" class="flex transition-transform duration-500 ease-in-out gap-8" style="width: 100%;">
+          
+          <!-- Card 1: Plain / Default (Light Gray) -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] bg-brand-lightGray p-8 rounded-[30px] border border-slate-200/30 flex flex-col justify-between h-72">
+            <div class="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-6 text-xl">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-slate-800 mb-3">Feature 1</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                It is a long established fact that a reader will established fact that a reader will.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Green Solid -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] bg-brand-green p-8 rounded-[30px] flex flex-col justify-between h-72 text-white shadow-xl">
+            <div class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center text-white mb-6 text-xl">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white mb-3">Feature 2</h3>
+              <p class="text-white/80 text-sm leading-relaxed">
+                It is a long established fact that a reader will established fact that a reader will.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: White -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] bg-white p-8 rounded-[30px] border border-slate-100 shadow-lg flex flex-col justify-between h-72">
+            <div class="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-6 text-xl">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-slate-800 mb-3">Feature 3</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                It is a long established fact that a reader will established fact that a reader will.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Plain / Default (Light Gray) -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] bg-brand-lightGray p-8 rounded-[30px] border border-slate-200/30 flex flex-col justify-between h-72">
+            <div class="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-6 text-xl">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-slate-800 mb-3">Feature 4</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                It is a long established fact that a reader will established fact that a reader will.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CTA BANNER SECTION ================= -->
+  <section class="bg-brand-forest text-white py-16 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-5 sm:px-10 flex flex-col items-center text-center relative z-10">
+      
+      <h2 class="font-heading font-extrabold text-3xl sm:text-4xl mb-4 tracking-tight">Start Today</h2>
+      <p class="text-white/60 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
+        Lorem ipsum dolor sit amet consectetur. Facilisi et mattis elementum metus magna. Natoque aenean tincidunt pellentesque tellus nunc mauris.
+      </p>
+
+      <form id="cta-form" onsubmit="handleCtaSubmit(event)" class="w-full max-w-md flex flex-col sm:flex-row gap-3">
+        <input type="email" id="cta-email" required class="flex-grow px-5 py-3.5 rounded-full border border-white/20 focus:outline-none focus:border-brand-green bg-white/5 text-white placeholder-white/40 text-sm" placeholder="Enter Email" />
+        <button type="submit" class="px-8 py-3.5 bg-white hover:bg-slate-100 text-brand-forest font-heading font-bold rounded-full transition-colors text-sm shadow">
+          Submit
+        </button>
+      </form>
+
+      <!-- CTA success -->
+      <div id="cta-success" class="hidden text-brand-accentGreen font-bold text-sm mt-4">
+        Thank you for subscribing!
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= SERVICES SECTION ================= -->
+  <section id="services" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      
+      <!-- Heading & Navigation -->
+      <div class="flex justify-between items-end mb-16">
+        <h2 class="text-brand-forest font-heading font-extrabold text-3xl sm:text-4xl lg:text-[45px] leading-tight">
+          Services
+        </h2>
+        <!-- Prev/Next Slider buttons -->
+        <div class="flex gap-3">
+          <button id="serv-prev" class="w-10 h-10 rounded-full border border-slate-200 hover:border-brand-green text-slate-600 hover:text-brand-green flex items-center justify-center transition-all bg-white" aria-label="Previous service">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="serv-next" class="w-10 h-10 rounded-full bg-brand-green hover:bg-brand-accentGreen text-white flex items-center justify-center shadow-md transition-all" aria-label="Next service">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Services Grid Slider -->
+      <div class="overflow-hidden relative w-full">
+        <div id="services-slider" class="flex transition-transform duration-500 ease-in-out gap-8" style="width: 100%;">
+          
+          <!-- Card 1: Green Detailed Content -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] bg-brand-green p-8 rounded-[30px] flex flex-col justify-between h-[420px] text-white shadow-xl">
+            <div>
+              <h3 class="font-heading font-bold text-2xl mb-4 text-white">Service Name</h3>
+              <p class="text-white/80 text-sm leading-relaxed mb-6">
+                It is a long established fact that a reader will established fact that a reader will.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center gap-2 text-white/90 text-sm">
+                  <i class="fa-solid fa-circle-check"></i> Quality subbase preparation
+                </li>
+                <li class="flex items-center gap-2 text-white/90 text-sm">
+                  <i class="fa-solid fa-circle-check"></i> High drainage double-coated backing
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="px-6 py-3 bg-white hover:bg-slate-100 text-brand-forest font-heading font-bold rounded-xl text-center text-sm transition-colors shadow">
+              Read More
+            </a>
+          </div>
+
+          <!-- Card 2: Image Card -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] h-[420px] rounded-[30px] overflow-hidden relative shadow-lg group">
+            <img src="hero_installer.png" alt="Artificial grass installation work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <h4 class="text-white font-heading font-bold text-xl">Lawn Installation</h4>
+            </div>
+          </div>
+
+          <!-- Card 3: Image Card -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] h-[420px] rounded-[30px] overflow-hidden relative shadow-lg group">
+            <img src="turf_roll.png" alt="Synthetic turf texture close-up" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <h4 class="text-white font-heading font-bold text-xl">Premium Materials</h4>
+            </div>
+          </div>
+
+          <!-- Card 4: Image Card -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] h-[420px] rounded-[30px] overflow-hidden relative shadow-lg group">
+            <img src="blog_golf.png" alt="Custom backyard golf putting green" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <h4 class="text-white font-heading font-bold text-xl">Putting Greens</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= TESTIMONIALS SECTION ================= -->
+  <section id="testimonials" class="py-24 bg-brand-cream relative">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      
+      <!-- Section Title -->
+      <h2 class="text-brand-forest font-heading font-extrabold text-3xl sm:text-4xl lg:text-[45px] leading-tight mb-16 text-center lg:text-left">
+        Testimonials
+      </h2>
+
+      <!-- Testimonial Content Grid -->
+      <div id="testimonial-container" class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Image (Client avatar portrait) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-[380px] h-[400px] rounded-[30px] overflow-hidden shadow-xl border border-slate-200">
+            <img id="testi-img" src="blog_dog.png" alt="Client Review" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Right: Testimonial details -->
+        <div class="lg:col-span-7 flex flex-col items-start justify-between min-h-[300px]">
+          <div>
+            <!-- Giant Quote mark in green -->
+            <div class="text-brand-green text-6xl leading-none mb-6">“</div>
+            <p id="testi-quote" class="text-slate-700 text-lg sm:text-xl leading-relaxed italic mb-8">
+              Lorem ipsum dolor sit amet consectetur. Lobortis velit vulputate leo ut. Lorem ipsum dolor sit consectetur. Etiam lacus urna non elementum massa. Venenatis quis maecenas scelerisque nisi mauris nec enim semper pretium.
+            </p>
+          </div>
+
+          <div class="flex justify-between items-center w-full border-t border-slate-200/50 pt-6">
+            <div>
+              <h4 id="testi-name" class="text-brand-forest font-heading font-bold text-lg leading-none mb-1">Khamdra creatives</h4>
+              <span id="testi-role" class="text-xs text-slate-400 font-semibold uppercase block">Business Owner</span>
+            </div>
+            
+            <!-- Controls -->
+            <div class="flex gap-3">
+              <button id="testi-prev" class="w-10 h-10 rounded-full border border-slate-200 hover:border-brand-green text-slate-600 hover:text-brand-green flex items-center justify-center transition-all bg-white" aria-label="Previous Testimonial">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button id="testi-next" class="w-10 h-10 rounded-full bg-brand-green hover:bg-brand-accentGreen text-white flex items-center justify-center shadow-md transition-all" aria-label="Next Testimonial">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer class="bg-brand-forest text-white/60 pt-20 pb-10 border-t border-white/5 relative z-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      
+      <!-- Col 1: About Brand -->
+      <div class="flex flex-col gap-6">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-brand-green flex items-center justify-center shadow-lg">
+            <i class="fa-solid fa-leaf text-white text-base"></i>
+          </div>
+          <span class="text-white font-heading font-extrabold text-xl tracking-tight">Logoipsum</span>
+        </a>
+        <p class="text-sm leading-relaxed">
+          Premium synthetic grass installations. Our skilled teams prepare ground subbases and grade layers with architectural precision.
+        </p>
+        <div class="flex gap-3 text-lg">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-green hover:text-white flex items-center justify-center transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-green hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-green hover:text-white flex items-center justify-center transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div>
+        <h4 class="text-white font-heading font-bold text-lg mb-6">Quick Links</h4>
+        <ul class="space-y-4 text-sm font-semibold">
+          <li><a href="#" class="hover:text-brand-green transition-colors">Home</a></li>
+          <li><a href="#about" class="hover:text-brand-green transition-colors">About Us</a></li>
+          <li><a href="#services" class="hover:text-brand-green transition-colors">Services</a></li>
+          <li><a href="#features" class="hover:text-brand-green transition-colors">Features</a></li>
+          <li><a href="#testimonials" class="hover:text-brand-green transition-colors">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact Us -->
+      <div>
+        <h4 class="text-white font-heading font-bold text-lg mb-6">Contact Us</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-brand-green mt-1"></i>
+            <div>
+              <span class="block text-xs font-bold text-white/40 uppercase">PHONE</span>
+              <a href="tel:+918005815515" class="text-white hover:text-brand-green font-bold transition-colors">+91 80058-15515</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-brand-green mt-1"></i>
+            <div>
+              <span class="block text-xs font-bold text-white/40 uppercase">EMAIL</span>
+              <a href="mailto:info@logoipsum.com" class="text-white hover:text-brand-green font-bold transition-colors">info@logoipsum.com</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-brand-green mt-1"></i>
+            <div>
+              <span class="block text-xs font-bold text-white/40 uppercase">OFFICE</span>
+              <span class="text-white font-bold leading-normal">1842 Greenfield Dr, Dallas, TX 75218</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Working Hours -->
+      <div>
+        <h4 class="text-white font-heading font-bold text-lg mb-6">Working Hours</h4>
+        <ul class="space-y-4 text-sm font-semibold">
+          <li class="flex justify-between border-b border-white/5 pb-2">
+            <span>Mon-Fri</span>
+            <span class="text-white">8:00 AM - 7:00 PM</span>
+          </li>
+          <li class="flex justify-between border-b border-white/5 pb-2">
+            <span>Saturday</span>
+            <span class="text-white">9:00 AM - 5:00 PM</span>
+          </li>
+          <li class="flex justify-between pb-2">
+            <span>Sunday</span>
+            <span class="text-brand-gold">Closed</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Legal Bottom -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold">
+      <span>&copy; 2026 Logoipsum Turf Solutions. All Rights Reserved.</span>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-brand-green transition-colors">Terms &amp; Conditions</a>
+        <a href="#" class="hover:text-brand-green transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================= MOBILE STICKY CTA BAR ================= -->
+  <div class="fixed bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-slate-200/80 px-5 py-3 flex justify-between items-center sm:hidden shadow-2xl">
+    <div>
+      <span class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Ready for a green lawn?</span>
+      <span class="text-brand-forest font-heading font-extrabold text-sm">Free On-Site Estimate</span>
+    </div>
+    <div class="flex gap-2">
+      <a href="tel:+918005815515" class="w-10 h-10 bg-brand-green hover:bg-brand-accentGreen text-white rounded-xl flex items-center justify-center shadow-lg transition-colors">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="#contact" class="px-5 py-2.5 bg-brand-green hover:bg-brand-accentGreen text-white font-heading font-bold rounded-xl text-xs flex items-center justify-center shadow-lg transition-colors">
+        Get Quote
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Header shadow on scroll
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu Drawer Control
+    const drawer = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const btnTop = document.getElementById('hamburger-top');
+    const btnMid = document.getElementById('hamburger-mid');
+    const btnBottom = document.getElementById('hamburger-bottom');
+
+    function toggleDrawer() {
+      const isOpen = !drawer.classList.contains('translate-x-full');
+      if (isOpen) {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+        btnTop.style.transform = 'none';
+        btnMid.style.opacity = '1';
+        btnBottom.style.transform = 'none';
+        document.body.style.overflow = '';
+      } else {
+        drawer.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        btnTop.style.transform = 'translateY(8px) rotate(45deg)';
+        btnMid.style.opacity = '0';
+        btnBottom.style.transform = 'translateY(-8px) rotate(-45deg)';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    document.getElementById('mobile-menu-btn').addEventListener('click', toggleDrawer);
+
+    // Generic Slider Logic Helper
+    function initSlider(sliderId, prevBtnId, nextBtnId) {
+      const slider = document.getElementById(sliderId);
+      const prevBtn = document.getElementById(prevBtnId);
+      const nextBtn = document.getElementById(nextBtnId);
+      let offset = 0;
+
+      function getStepWidth() {
+        const card = slider.firstElementChild;
+        const cardWidth = card.getBoundingClientRect().width;
+        const gap = 32; // tailwind gap-8 is 32px
+        return cardWidth + gap;
+      }
+
+      function slide(direction) {
+        const stepWidth = getStepWidth();
+        const visibleWidth = slider.parentElement.getBoundingClientRect().width;
+        const totalWidth = slider.scrollWidth;
+        const maxOffset = totalWidth - visibleWidth;
+
+        if (direction === 'next') {
+          offset += stepWidth;
+          if (offset > maxOffset) {
+            offset = 0; // Wrap around
+          }
+        } else {
+          offset -= stepWidth;
+          if (offset < 0) {
+            offset = maxOffset > 0 ? maxOffset : 0;
+          }
+        }
+        slider.style.transform = `translateX(-${offset}px)`;
+      }
+
+      prevBtn.addEventListener('click', () => slide('prev'));
+      nextBtn.addEventListener('click', () => slide('next'));
+    }
+
+    // Initialize Features and Services sliders
+    initSlider('features-slider', 'feat-prev', 'feat-next');
+    initSlider('services-slider', 'serv-prev', 'serv-next');
+
+    // Testimonials Data & Slider Logic
+    const testimonials = [
+      {
+        quote: "Lorem ipsum dolor sit amet consectetur. Lobortis velit vulputate leo ut. Lorem ipsum dolor sit consectetur. Etiam lacus urna non elementum massa. Venenatis quis maecenas scelerisque nisi  mauris nec enim semper pretium.",
+        name: "Khamdra creatives",
+        role: "Business Owner",
+        img: "blog_dog.png"
+      },
+      {
+        quote: "Our lawn has never looked better! The base grading was completed in 1 day and the seaming looks completely natural and invisible. Excellent warranty package too.",
+        name: "Rhonda Rhodes",
+        role: "Homeowner, Dallas",
+        img: "blog_lawn.png"
+      },
+      {
+        quote: "Practicing golf putts on our new custom PGA-caliber green has been incredible. Realistic fringe speeds and contour breaks. Highly recommended installers!",
+        name: "Daniel Hamilton",
+        role: "Homeowner, Plano",
+        img: "blog_golf.png"
+      }
+    ];
+
+    let currentTestiIndex = 0;
+    const testiQuote = document.getElementById('testi-quote');
+    const testiName = document.getElementById('testi-name');
+    const testiRole = document.getElementById('testi-role');
+    const testiImg = document.getElementById('testi-img');
+    const testiPrev = document.getElementById('testi-prev');
+    const testiNext = document.getElementById('testi-next');
+
+    function updateTestimonial(index) {
+      const data = testimonials[index];
+      // Fade out
+      testiQuote.style.opacity = 0;
+      testiName.style.opacity = 0;
+      testiRole.style.opacity = 0;
+      testiImg.style.opacity = 0;
+
+      setTimeout(() => {
+        testiQuote.textContent = data.quote;
+        testiName.textContent = data.name;
+        testiRole.textContent = data.role;
+        testiImg.src = data.img;
+
+        // Fade in
+        testiQuote.style.opacity = 1;
+        testiName.style.opacity = 1;
+        testiRole.style.opacity = 1;
+        testiImg.style.opacity = 1;
+      }, 250);
+    }
+
+    // Set transition styles
+    testiQuote.style.transition = 'opacity 0.25s ease';
+    testiName.style.transition = 'opacity 0.25s ease';
+    testiRole.style.transition = 'opacity 0.25s ease';
+    testiImg.style.transition = 'opacity 0.25s ease';
+
+    testiPrev.addEventListener('click', () => {
+      currentTestiIndex--;
+      if (currentTestiIndex < 0) {
+        currentTestiIndex = testimonials.length - 1;
+      }
+      updateTestimonial(currentTestiIndex);
+    });
+
+    testiNext.addEventListener('click', () => {
+      currentTestiIndex++;
+      if (currentTestiIndex >= testimonials.length) {
+        currentTestiIndex = 0;
+      }
+      updateTestimonial(currentTestiIndex);
+    });
+
+    // Form Submission Handling (Hero Quote Form)
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('quote-form');
+      const success = document.getElementById('quote-success');
+      const btn = document.getElementById('quote-submit-btn');
+
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Submitting...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      }, 1500);
+    }
+
+    // CTA Banner Form Submit
+    function handleCtaSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('cta-form');
+      const success = document.getElementById('cta-success');
+      
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+    }
+
+    // Scroll Reveal (Fade-in animations on scroll)
+    const reveals = document.querySelectorAll('.reveal');
+    function checkReveal() {
+      const windowHeight = window.innerHeight;
+      reveals.forEach(reveal => {
+        const elementTop = reveal.getBoundingClientRect().top;
+        const elementVisible = 120;
+        if (elementTop < windowHeight - elementVisible) {
+          reveal.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', checkReveal);
+    window.addEventListener('load', checkReveal);
+  </script>
+
+</body>
+</html>
