@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TurfShield | Premium Turf & Sod Installation Solutions</title>
+  <meta name="description" content="Texas's premier turf contractor. TurfShield delivers premium quality synthetic grass, dog turf, and backyard putting greens with a 15-year warranty." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome v6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0B3C5D',
+              blue: '#1D2731',
+              sky: '#328CC1',
+              accent: '#F9C00F', // Vibrant yellow/gold
+              dark: '#1D1D1D',
+              cream: '#FAF9F6',
+              lightGray: '#F5F5F5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1F2937;
+      background-color: #FAF9F6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      scroll-margin-top: 140px;
+    }
+
+    /* Ticker scrolling animation */
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-wrap {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-content {
+      display: inline-block;
+      animation: ticker 25s linear infinite;
+    }
+
+    /* FAQ accordion styling */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    }
+    .faq-item.active .faq-content {
+      max-height: 1000px;
+      transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B3C5D;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #F9C00F;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #328CC1;
+    }
+  </style>
+</head>
+<body class="bg-brand-cream">
+
+  <!-- ================= TOP MAIN HEADER ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0B3C5D] shadow-xl">
+    <!-- Top Brand Row -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 py-4 flex justify-between items-center border-b border-white/10">
+      
+      <!-- Left: Get Free Estimate Button -->
+      <a href="#contact" class="hidden sm:inline-flex px-6 py-2.5 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-full text-xs tracking-wider uppercase transition-colors">
+        Get A Free Estimate
+      </a>
+
+      <!-- Center Logo -->
+      <a href="#" class="flex items-center gap-2 group mx-auto sm:mx-0">
+        <div class="w-10 h-10 rounded-xl bg-brand-accent flex items-center justify-center shadow-lg transition-transform group-hover:scale-105">
+          <i class="fa-solid fa-shield-halved text-brand-navy text-xl"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-white font-heading font-extrabold text-xl tracking-tight leading-none uppercase">TurfShield</span>
+          <span class="text-[9px] font-extrabold uppercase tracking-widest text-brand-accent mt-0.5">Premium Turf & Sod</span>
+        </div>
+      </a>
+
+      <!-- Right Contact Info -->
+      <div class="flex items-center gap-3 bg-white/5 py-1.5 pl-3 pr-4 rounded-full border border-white/10">
+        <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-brand-navy">
+          <i class="fa-solid fa-phone text-xs"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[9px] text-white/50 font-bold uppercase tracking-wider leading-none">Call Now</span>
+          <a href="tel:+12145550199" class="text-white font-heading font-extrabold text-xs hover:text-brand-accent transition-colors">(214) 555-0199</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Navigation Row -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 py-3 flex justify-between items-center">
+      
+      <!-- Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 mx-auto">
+        <a href="#" class="text-white hover:text-brand-accent font-medium text-sm transition-colors">Home</a>
+        <a href="#about" class="text-white/80 hover:text-brand-accent font-medium text-sm transition-colors">About Us</a>
+        <a href="#services" class="text-white/80 hover:text-brand-accent font-medium text-sm transition-colors">Our Services</a>
+        <a href="#process" class="text-white/80 hover:text-brand-accent font-medium text-sm transition-colors">Our Process</a>
+        <a href="#gallery" class="text-white/80 hover:text-brand-accent font-medium text-sm transition-colors">Portfolio</a>
+        <a href="#reviews" class="text-white/80 hover:text-brand-accent font-medium text-sm transition-colors">Reviews</a>
+        <a href="#faqs" class="text-white/80 hover:text-brand-accent font-medium text-sm transition-colors">FAQs</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-xl bg-white/10 flex flex-col justify-center items-center gap-1.5 border border-white/10 ml-auto" aria-label="Toggle Menu">
+        <span class="w-4 h-0.5 bg-white transition-transform duration-300" id="hamburger-top"></span>
+        <span class="w-4 h-0.5 bg-white transition-opacity duration-300" id="hamburger-mid"></span>
+        <span class="w-4 h-0.5 bg-white transition-transform duration-300" id="hamburger-bottom"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-y-0 right-0 z-40 w-80 bg-brand-navy shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-8 pt-36 border-l border-white/5">
+    <div class="flex flex-col gap-6">
+      <a href="#" class="text-white text-lg font-heading font-bold hover:text-brand-accent transition-colors" onclick="toggleDrawer()">Home</a>
+      <a href="#about" class="text-white/80 text-lg font-heading font-bold hover:text-brand-accent transition-colors" onclick="toggleDrawer()">About Us</a>
+      <a href="#services" class="text-white/80 text-lg font-heading font-bold hover:text-brand-accent transition-colors" onclick="toggleDrawer()">Our Services</a>
+      <a href="#process" class="text-white/80 text-lg font-heading font-bold hover:text-brand-accent transition-colors" onclick="toggleDrawer()">Our Process</a>
+      <a href="#gallery" class="text-white/80 text-lg font-heading font-bold hover:text-brand-accent transition-colors" onclick="toggleDrawer()">Portfolio</a>
+      <a href="#reviews" class="text-white/80 text-lg font-heading font-bold hover:text-brand-accent transition-colors" onclick="toggleDrawer()">Reviews</a>
+      <a href="#faqs" class="text-white/80 text-lg font-heading font-bold hover:text-brand-accent transition-colors" onclick="toggleDrawer()">FAQs</a>
+    </div>
+    <div class="flex flex-col gap-4 border-t border-white/10 pt-6">
+      <a href="#contact" class="w-full py-3 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-xl text-center shadow-lg transition-colors" onclick="toggleDrawer()">
+        Get Free Estimate
+      </a>
+    </div>
+  </div>
+  <!-- Drawer Overlay -->
+  <div id="drawer-overlay" class="fixed inset-0 z-30 bg-black/50 hidden backdrop-blur-sm" onclick="toggleDrawer()"></div>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="relative min-h-[95vh] flex items-center bg-[#0B3C5D] pt-40 pb-20 overflow-hidden">
+    <!-- Gradient Sky Background Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/90 to-brand-sky/60 z-0"></div>
+    
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 relative z-10 w-full text-center">
+      
+      <!-- Ratings trust badges -->
+      <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-10 mb-8">
+        <!-- Google -->
+        <div class="flex items-center gap-2">
+          <i class="fa-brands fa-google text-white text-base"></i>
+          <div class="flex gap-0.5 text-brand-accent text-xs">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-white text-xs font-semibold">5.0 Rating</span>
+        </div>
+        <!-- Trustpilot -->
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-white text-base"></i>
+          <div class="flex gap-0.5 text-brand-accent text-xs">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-white text-xs font-semibold">Trustpilot Rated</span>
+        </div>
+        <!-- Facebook -->
+        <div class="flex items-center gap-2">
+          <i class="fa-brands fa-facebook-f text-white text-base"></i>
+          <div class="flex gap-0.5 text-brand-accent text-xs">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-white text-xs font-semibold">100% Recommendation</span>
+        </div>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-white font-heading font-black text-4xl sm:text-5xl lg:text-7xl leading-tight uppercase max-w-5xl mx-auto mb-6">
+        Premium Turf Solutions For Texas Homes And Businesses
+      </h1>
+
+      <!-- Checklist items -->
+      <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 mb-10 text-white font-heading font-extrabold text-xs tracking-wider uppercase">
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-brand-accent"></i> 15-Year Warranty
+        </span>
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-brand-accent"></i> High-Drainage Systems
+        </span>
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-brand-accent"></i> Expert Installation
+        </span>
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-brand-accent"></i> Locally Operated
+        </span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <a href="#contact" class="px-8 py-4 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-full flex items-center justify-center gap-2 shadow-lg transition-colors">
+          Get Your Free Estimate
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+        <a href="tel:+12145550199" class="px-8 py-4 border border-white/20 hover:border-white/50 hover:bg-white/5 text-white font-heading font-extrabold rounded-full flex items-center justify-center gap-2 transition-all">
+          Talk To An Expert Now
+          <i class="fa-solid fa-phone text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Hero Base image with wavy divider -->
+      <div class="max-w-4xl mx-auto rounded-[30px] overflow-hidden border-4 border-white/10 shadow-2xl relative">
+        <img src="hero_turf.png" alt="Eco friendly synthetic sod grass installation" class="w-full object-cover h-[350px] sm:h-[450px]" />
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 grid lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Left side overlapping images -->
+      <div class="lg:col-span-6 relative flex items-center justify-center min-h-[400px]">
+        <div class="w-[80%] h-[350px] sm:h-[430px] rounded-[30px] overflow-hidden shadow-xl border border-slate-200">
+          <img src="hero_installer.png" alt="Laying synthetic turf rolls" class="w-full h-full object-cover" />
+        </div>
+        <!-- Yellow badge overlay -->
+        <div class="absolute bottom-6 left-6 bg-brand-accent text-brand-navy font-heading font-black text-center py-4 px-6 rounded-2xl shadow-2xl border-2 border-white">
+          <span class="text-4xl block leading-none">15+</span>
+          <span class="text-[10px] uppercase font-bold tracking-wider">Years of Turf<br />Experience</span>
+        </div>
+      </div>
+
+      <!-- Right side details -->
+      <div class="lg:col-span-6 flex flex-col items-start">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-lightGray text-brand-navy mb-4 border border-slate-200">
+          <i class="fa-solid fa-circle-info text-xs"></i>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider font-heading">Our Agency</span>
+        </div>
+        <h2 class="text-brand-navy font-heading font-black text-3xl sm:text-4xl lg:text-[45px] leading-tight uppercase mb-6">
+          Your Local Experts In Professional Turf Installation
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+          At TurfShield, we supply and build engineered synthetic sod and putting greens across Texas. Our team is dedicated to providing high-density, hyper-draining grass structures that feel exactly like natural lawn sod.
+        </p>
+
+        <!-- Checklist -->
+        <div class="grid sm:grid-cols-2 gap-4 mb-8 w-full">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-accent/20 text-brand-navy flex items-center justify-center text-xs flex-shrink-0">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="font-heading font-bold text-sm text-brand-navy">Premium US-made sod</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-accent/20 text-brand-navy flex items-center justify-center text-xs flex-shrink-0">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="font-heading font-bold text-sm text-brand-navy">Antimicrobial pet infill</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-accent/20 text-brand-navy flex items-center justify-center text-xs flex-shrink-0">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="font-heading font-bold text-sm text-brand-navy">Zero water, zero maintenance</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-accent/20 text-brand-navy flex items-center justify-center text-xs flex-shrink-0">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="font-heading font-bold text-sm text-brand-navy">15-year warranty protection</span>
+          </div>
+        </div>
+
+        <a href="#services" class="px-8 py-3.5 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-full flex items-center justify-center gap-2 shadow-lg transition-colors">
+          Explore Our Services
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= SCROLLING TICKER RIBBON ================= -->
+  <div class="bg-brand-accent py-4 border-y-2 border-brand-navy ticker-wrap relative z-10">
+    <div class="ticker-content font-heading font-black text-brand-navy text-sm uppercase tracking-widest flex items-center gap-12">
+      <span><i class="fa-solid fa-star"></i> 15-Year Warranty</span>
+      <span><i class="fa-solid fa-star"></i> US-Manufactured Turf</span>
+      <span><i class="fa-solid fa-star"></i> Pet-Safe ZeoFill Infill</span>
+      <span><i class="fa-solid fa-star"></i> PGA-Speed Putting Greens</span>
+      <span><i class="fa-solid fa-star"></i> 15-Year Warranty</span>
+      <span><i class="fa-solid fa-star"></i> US-Manufactured Turf</span>
+      <span><i class="fa-solid fa-star"></i> Pet-Safe ZeoFill Infill</span>
+      <span><i class="fa-solid fa-star"></i> PGA-Speed Putting Greens</span>
+      <!-- Duplicate content to ensure smooth scroll -->
+      <span><i class="fa-solid fa-star"></i> 15-Year Warranty</span>
+      <span><i class="fa-solid fa-star"></i> US-Manufactured Turf</span>
+      <span><i class="fa-solid fa-star"></i> Pet-Safe ZeoFill Infill</span>
+      <span><i class="fa-solid fa-star"></i> PGA-Speed Putting Greens</span>
+    </div>
+  </div>
+
+
+  <!-- ================= SERVICES SECTION ================= -->
+  <section id="services" class="py-24 bg-brand-lightGray">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      
+      <!-- Eyebrow & Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-brand-navy border border-slate-200 mb-4">
+          <i class="fa-solid fa-circle-check text-xs text-brand-accent"></i>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider font-heading">Our Services</span>
+        </div>
+        <h2 class="text-brand-navy font-heading font-black text-3xl sm:text-4xl lg:text-[45px] leading-tight uppercase">
+          Professional Turf Installation Services
+        </h2>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        
+        <!-- Card 1 -->
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-md flex flex-col justify-between h-[420px] overflow-hidden group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="residential_lawn.png" alt="Residential Turf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-brand-accent text-brand-navy flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-house text-sm"></i>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Residential Turf</h3>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Premium home sod replacements with rich density, surviving heavy freezes and Texas summers.
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-brand-navy font-heading font-bold text-xs uppercase tracking-wider">Learn More</span>
+              <div class="w-8 h-8 rounded-full bg-brand-lightGray text-brand-navy flex items-center justify-center text-xs group-hover:bg-brand-accent group-hover:text-brand-navy transition-all">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-md flex flex-col justify-between h-[420px] overflow-hidden group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="putting_green.png" alt="Backyard Putting Green" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-brand-accent text-brand-navy flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-flag text-sm"></i>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Custom Putting Greens</h3>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Backyard putting courses designed with custom breaks, cups, and true ball roll.
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-brand-navy font-heading font-bold text-xs uppercase tracking-wider">Learn More</span>
+              <div class="w-8 h-8 rounded-full bg-brand-lightGray text-brand-navy flex items-center justify-center text-xs group-hover:bg-brand-accent group-hover:text-brand-navy transition-all">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-md flex flex-col justify-between h-[420px] overflow-hidden group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="pet_turf.png" alt="Pet Safe Turf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-brand-accent text-brand-navy flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-dog text-sm"></i>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Pet-Safe Turf Systems</h3>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Anti-microbial turf backing with rapid-drainage and odor-neutralizing infill.
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-brand-navy font-heading font-bold text-xs uppercase tracking-wider">Learn More</span>
+              <div class="w-8 h-8 rounded-full bg-brand-lightGray text-brand-navy flex items-center justify-center text-xs group-hover:bg-brand-accent group-hover:text-brand-navy transition-all">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-md flex flex-col justify-between h-[420px] overflow-hidden group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="turf_roll.png" alt="Commercial Turf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-brand-accent text-brand-navy flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-building text-sm"></i>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Commercial Layouts</h3>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                High-wear commercial turf systems for corporate spaces, schools, and playgrounds.
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-brand-navy font-heading font-bold text-xs uppercase tracking-wider">Learn More</span>
+              <div class="w-8 h-8 rounded-full bg-brand-lightGray text-brand-navy flex items-center justify-center text-xs group-hover:bg-brand-accent group-hover:text-brand-navy transition-all">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-md flex flex-col justify-between h-[420px] overflow-hidden group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="about_prep.png" alt="Excavation Prep Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-brand-accent text-brand-navy flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-trowel text-sm"></i>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Excavation &amp; Prep</h3>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Grading and compacting crushed granite base layers to prevent sinking and shifting.
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-brand-navy font-heading font-bold text-xs uppercase tracking-wider">Learn More</span>
+              <div class="w-8 h-8 rounded-full bg-brand-lightGray text-brand-navy flex items-center justify-center text-xs group-hover:bg-brand-accent group-hover:text-brand-navy transition-all">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-md flex flex-col justify-between h-[420px] overflow-hidden group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="before_after.png" alt="Drainage Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-brand-accent text-brand-navy flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-droplet text-sm"></i>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Drainage Optimization</h3>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Installing porous sub-base configurations that direct heavy rainwater away from the foundation.
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-brand-navy font-heading font-bold text-xs uppercase tracking-wider">Learn More</span>
+              <div class="w-8 h-8 rounded-full bg-brand-lightGray text-brand-navy flex items-center justify-center text-xs group-hover:bg-brand-accent group-hover:text-brand-navy transition-all">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Button -->
+      <div class="text-center mt-12">
+        <a href="#contact" class="px-10 py-4 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-black rounded-full uppercase shadow-lg transition-colors">
+          Book Estimate Now
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= PROCESS SECTION ================= -->
+  <section id="process" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 grid lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Left side content and image -->
+      <div class="lg:col-span-6 flex flex-col items-start">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-lightGray text-brand-navy border border-slate-200 mb-4">
+          <i class="fa-solid fa-circle-play text-xs text-brand-accent"></i>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider font-heading">Our Workflow</span>
+        </div>
+        <h2 class="text-brand-navy font-heading font-black text-3xl sm:text-4xl lg:text-[45px] leading-tight uppercase mb-6">
+          Step-by-Step Turf Installation Process
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+          We follow a rigorous landscaping prep method to ensure your synthetic turf never wrinkles, pools, or separates at the seams.
+        </p>
+        
+        <div class="w-full h-64 sm:h-80 rounded-[30px] overflow-hidden shadow-lg border border-slate-200">
+          <img src="before_after.png" alt="Turf rolling process" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Right side vertical timeline steps -->
+      <div class="lg:col-span-6 space-y-8 relative pl-6 border-l-2 border-slate-100">
+        
+        <!-- Step 1 -->
+        <div class="relative">
+          <!-- Step indicator bullet -->
+          <div class="absolute -left-[35px] top-1.5 w-4.5 h-4.5 rounded-full bg-brand-accent border-4 border-white shadow"></div>
+          <span class="px-3 py-1 rounded bg-brand-accent/20 text-brand-navy font-heading font-extrabold text-[10px] uppercase tracking-wider block w-max mb-3">Step 1</span>
+          <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Survey &amp; Measurement</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            We map out the exact lawn dimensions, evaluate drainage runoff directions, and clear away weeds or existing sod base.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative">
+          <div class="absolute -left-[35px] top-1.5 w-4.5 h-4.5 rounded-full bg-brand-accent border-4 border-white shadow"></div>
+          <span class="px-3 py-1 rounded bg-brand-accent/20 text-brand-navy font-heading font-extrabold text-[10px] uppercase tracking-wider block w-max mb-3">Step 2</span>
+          <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Excavation &amp; Setting</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            We dig 2–3 inches down, lay crushed stone base, roll out weed barriers, and compact the sub-base firmly.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative">
+          <div class="absolute -left-[35px] top-1.5 w-4.5 h-4.5 rounded-full bg-brand-accent border-4 border-white shadow"></div>
+          <span class="px-3 py-1 rounded bg-brand-accent/20 text-brand-navy font-heading font-extrabold text-[10px] uppercase tracking-wider block w-max mb-3">Step 3</span>
+          <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">Final Inspection &amp; Infill</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            We lay turf, glue seam junctions invisibly, spread pet infill, and brush fibers upright with a power groomer.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CASE STUDIES SECTION ================= -->
+  <section id="gallery" class="py-24 bg-brand-dark text-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      
+      <!-- Eyebrow & Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-accent mb-4">
+          <i class="fa-solid fa-images text-xs"></i>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider font-heading">Our Gallery</span>
+        </div>
+        <h2 class="text-white font-heading font-black text-3xl sm:text-4xl lg:text-[45px] leading-tight uppercase">
+          Our Turf Installation Case Studies
+        </h2>
+      </div>
+
+      <!-- Asymmetrical Project Grid -->
+      <div class="grid md:grid-cols-12 gap-6">
+        
+        <!-- Large Left Image -->
+        <div class="md:col-span-5 rounded-[30px] overflow-hidden shadow-2xl h-[420px] md:h-[500px] relative group">
+          <img src="residential_lawn.png" alt="Completed Residential Sod Replacement" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6">
+            <span class="text-brand-accent font-heading font-bold text-xs uppercase tracking-wider block">Residential</span>
+            <p class="text-white font-heading font-extrabold text-xl">Lush Lawn Sod Replacement</p>
+          </div>
+        </div>
+
+        <!-- 4 Small Right Grid Images -->
+        <div class="md:col-span-7 grid grid-cols-2 gap-6">
+          <!-- Item 2 -->
+          <div class="rounded-3xl overflow-hidden shadow-2xl h-48 md:h-[238px] relative group">
+            <img src="putting_green.png" alt="Custom Putting Green" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-brand-accent font-heading font-bold text-[10px] uppercase tracking-wider block">Putting Green</span>
+              <p class="text-white font-heading font-bold text-base">Custom Backyard Cup breaks</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="rounded-3xl overflow-hidden shadow-2xl h-48 md:h-[238px] relative group">
+            <img src="pet_turf.png" alt="Dog Yard pet turf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-brand-accent font-heading font-bold text-[10px] uppercase tracking-wider block">Pet Turf</span>
+              <p class="text-white font-heading font-bold text-base">Odor-Free Play Grass</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="rounded-3xl overflow-hidden shadow-2xl h-48 md:h-[238px] relative group">
+            <img src="blog_lawn.png" alt="Residential lawn and stepping stones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-brand-accent font-heading font-bold text-[10px] uppercase tracking-wider block">Landscape</span>
+              <p class="text-white font-heading font-bold text-base">High Density Garden Sod</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="rounded-3xl overflow-hidden shadow-2xl h-48 md:h-[238px] relative group">
+            <img src="blog_golf.png" alt="Luxury home putting green" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-brand-accent font-heading font-bold text-[10px] uppercase tracking-wider block">Commercial</span>
+              <p class="text-white font-heading font-bold text-base">Elite Golf Putting Yard</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= SCROLLING TICKER RIBBON ================= -->
+  <div class="bg-brand-accent py-4 border-y-2 border-brand-navy ticker-wrap relative z-10">
+    <div class="ticker-content font-heading font-black text-brand-navy text-sm uppercase tracking-widest flex items-center gap-12">
+      <span><i class="fa-solid fa-star"></i> 15-Year Warranty</span>
+      <span><i class="fa-solid fa-star"></i> US-Manufactured Turf</span>
+      <span><i class="fa-solid fa-star"></i> Pet-Safe ZeoFill Infill</span>
+      <span><i class="fa-solid fa-star"></i> PGA-Speed Putting Greens</span>
+      <span><i class="fa-solid fa-star"></i> 15-Year Warranty</span>
+      <span><i class="fa-solid fa-star"></i> US-Manufactured Turf</span>
+      <span><i class="fa-solid fa-star"></i> Pet-Safe ZeoFill Infill</span>
+      <span><i class="fa-solid fa-star"></i> PGA-Speed Putting Greens</span>
+      <!-- Duplicate content to ensure smooth scroll -->
+      <span><i class="fa-solid fa-star"></i> 15-Year Warranty</span>
+      <span><i class="fa-solid fa-star"></i> US-Manufactured Turf</span>
+      <span><i class="fa-solid fa-star"></i> Pet-Safe ZeoFill Infill</span>
+      <span><i class="fa-solid fa-star"></i> PGA-Speed Putting Greens</span>
+    </div>
+  </div>
+
+
+  <!-- ================= TESTIMONIALS SECTION ================= -->
+  <section id="reviews" class="py-24 bg-brand-lightGray">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      
+      <!-- Eyebrow & Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-brand-navy border border-slate-200 mb-4">
+          <i class="fa-solid fa-comments text-xs text-brand-accent"></i>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider font-heading">Reviews</span>
+        </div>
+        <h2 class="text-brand-navy font-heading font-black text-3xl sm:text-4xl lg:text-[45px] leading-tight uppercase">
+          What Our Clients Say About Turf
+        </h2>
+      </div>
+
+      <!-- Testimonials 3-Column Layout -->
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left Column: Review cards -->
+        <div class="lg:col-span-4 flex flex-col justify-between gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-md">
+            <div class="flex gap-0.5 text-brand-accent text-xs mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed italic mb-4">
+              "We replaced our high-maintenance mud lawn with TurfShield. It drains immediately after heavy rain and looks amazing!"
+            </p>
+            <div class="flex items-center justify-between border-t border-slate-100 pt-3 text-xs">
+              <span class="font-heading font-bold text-brand-navy">Rhonda Rhodes</span>
+              <span class="text-slate-400">Homeowner</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-md">
+            <div class="flex gap-0.5 text-brand-accent text-xs mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed italic mb-4">
+              "The pet turf works exactly as advertised. Dog urine odor is non-existent thanks to the infill. Easy cleanup!"
+            </p>
+            <div class="flex items-center justify-between border-t border-slate-100 pt-3 text-xs">
+              <span class="font-heading font-bold text-brand-navy">Stephanie Nicol</span>
+              <span class="text-slate-400">Dog Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Column: Prominent Trust Badge + Thumbnails -->
+        <div class="lg:col-span-4 bg-brand-navy text-white rounded-3xl p-8 border-2 border-brand-accent flex flex-col justify-between text-center relative overflow-hidden">
+          <div>
+            <span class="text-[54px] font-heading font-black text-brand-accent leading-none block">99%</span>
+            <span class="text-xs uppercase font-bold tracking-widest text-white/70 block mt-2">Customer Satisfaction</span>
+            
+            <div class="flex items-center justify-center gap-2 mt-6">
+              <i class="fa-brands fa-google text-brand-accent text-lg"></i>
+              <span class="font-heading font-extrabold text-sm">Google Trust Review</span>
+            </div>
+          </div>
+
+          <!-- Thumbnails grid -->
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="h-20 rounded-xl overflow-hidden border border-white/10">
+              <img src="residential_lawn.png" alt="Turf project" class="w-full h-full object-cover" />
+            </div>
+            <div class="h-20 rounded-xl overflow-hidden border border-white/10">
+              <img src="putting_green.png" alt="Turf project" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Review cards -->
+        <div class="lg:col-span-4 flex flex-col justify-between gap-6">
+          <!-- Card 3 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-md">
+            <div class="flex gap-0.5 text-brand-accent text-xs mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed italic mb-4">
+              "PGA-grade speed backyard green. Having breaks mapped properly makes putting practice at home extremely realistic."
+            </p>
+            <div class="flex items-center justify-between border-t border-slate-100 pt-3 text-xs">
+              <span class="font-heading font-bold text-brand-navy">Daniel Hamilton</span>
+              <span class="text-slate-400">Avid Golfer</span>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-md">
+            <div class="flex gap-0.5 text-brand-accent text-xs mb-3">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed italic mb-4">
+              "Quick estimate process, friendly installers, clean base grading work. Turf looks neat and flawless."
+            </p>
+            <div class="flex items-center justify-between border-t border-slate-100 pt-3 text-xs">
+              <span class="font-heading font-bold text-brand-navy">Marcus Brody</span>
+              <span class="text-slate-400">Homeowner</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= SERVICE AREAS MAP OVERLAY ================= -->
+  <section class="relative py-24 bg-brand-navy overflow-hidden">
+    <!-- Map Background simulation -->
+    <div class="absolute inset-0 z-0 opacity-40">
+      <div class="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] opacity-25"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-navy via-transparent to-brand-navy"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 relative z-10">
+      <div class="max-w-xl bg-[#1D2731]/95 backdrop-blur-md p-8 sm:p-10 rounded-[30px] border border-white/10 shadow-2xl text-white">
+        <h3 class="font-heading font-black text-2xl uppercase text-white mb-4">Our Service Areas</h3>
+        <p class="text-white/60 text-xs leading-relaxed mb-6">
+          We provide elite turf installation services across the entire Dallas-Fort Worth metropolitan area.
+        </p>
+
+        <!-- Service Tag Pills -->
+        <div class="flex flex-wrap gap-2.5 mb-8">
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Dallas</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Fort Worth</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Plano</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Frisco</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">McKinney</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Allen</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Southlake</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Colleyville</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold">Coppell</span>
+        </div>
+
+        <a href="#contact" class="w-full py-3.5 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-xl block text-center shadow-lg transition-colors">
+          Get Estimate For Your Area
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FAQS SECTION ================= -->
+  <section id="faqs" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 grid lg:grid-cols-12 gap-16 items-start">
+      
+      <!-- Left: FAQ list -->
+      <div class="lg:col-span-7 space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-brand-lightGray border border-slate-100 rounded-2xl transition-all duration-300">
+          <button class="w-full px-6 py-5 flex justify-between items-center text-left" onclick="toggleFaq(this)">
+            <span class="font-heading font-bold text-brand-navy text-base">How long does synthetic turf last?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-xs text-brand-navy shadow-sm transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="px-6 pb-5 text-slate-500 text-xs leading-relaxed border-t border-slate-200/50 pt-3">
+              EcoTurf installations are engineered to last 15–20 years. Our premium turf backing holds fibers securely and features a 15-year manufacturer warranty.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-brand-lightGray border border-slate-100 rounded-2xl transition-all duration-300">
+          <button class="w-full px-6 py-5 flex justify-between items-center text-left" onclick="toggleFaq(this)">
+            <span class="font-heading font-bold text-brand-navy text-base">Does artificial turf drain properly during rain?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-xs text-brand-navy shadow-sm transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="px-6 pb-5 text-slate-500 text-xs leading-relaxed border-t border-slate-200/50 pt-3">
+              Yes, our porous backing system features dynamic micro-drains that drain up to 30 inches of water per hour, preventing foundation pooling.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-brand-lightGray border border-slate-100 rounded-2xl transition-all duration-300">
+          <button class="w-full px-6 py-5 flex justify-between items-center text-left" onclick="toggleFaq(this)">
+            <span class="font-heading font-bold text-brand-navy text-base">Is turf safe for dogs and pets?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-xs text-brand-navy shadow-sm transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="px-6 pb-5 text-slate-500 text-xs leading-relaxed border-t border-slate-200/50 pt-3">
+              Absolutely. Our dog-friendly turf features non-absorbent backing, antimicrobial ZeoFill infill to neutralize odors, and heavy-gauge yarn.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-brand-lightGray border border-slate-100 rounded-2xl transition-all duration-300">
+          <button class="w-full px-6 py-5 flex justify-between items-center text-left" onclick="toggleFaq(this)">
+            <span class="font-heading font-bold text-brand-navy text-base">Does synthetic grass get hot?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-xs text-brand-navy shadow-sm transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="px-6 pb-5 text-slate-500 text-xs leading-relaxed border-t border-slate-200/50 pt-3">
+              While synthetic turf absorbs heat in direct sun, our modern TurfShield systems utilize cooling turf infill technologies to remain up to 15% cooler.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Call to action -->
+      <div class="lg:col-span-5 flex flex-col items-start bg-brand-lightGray p-8 rounded-3xl border border-slate-100">
+        <span class="text-brand-accent font-heading font-extrabold text-[10px] uppercase tracking-wider block mb-2">Got Questions?</span>
+        <h3 class="font-heading font-black text-2xl text-brand-navy mb-4">We've Got Answers</h3>
+        <p class="text-slate-500 text-xs leading-relaxed mb-6">
+          Still not sure which turf options fit your yard layout? Call our consultants for a detailed walkthrough.
+        </p>
+        <a href="tel:+12145550199" class="px-6 py-3.5 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-xl shadow-md transition-colors block w-full text-center">
+          Contact Our Team For Details
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CONTACT FORM SECTION ================= -->
+  <section id="contact" class="py-24 bg-brand-lightGray">
+    <div class="max-w-4xl mx-auto px-5 sm:px-10">
+      
+      <!-- Lead Form Card -->
+      <div class="bg-white p-8 sm:p-12 rounded-[30px] border border-slate-100 shadow-xl">
+        <h3 class="font-heading font-black text-3xl text-brand-navy mb-2 text-center uppercase">Schedule A Free Measurements Visit</h3>
+        <p class="text-slate-500 text-center text-sm mb-8 max-w-md mx-auto">Get your free, no-obligation on-site measurements and custom estimates.</p>
+        
+        <form id="lead-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="flex flex-col">
+              <label for="name" class="text-xs font-heading font-bold text-brand-navy uppercase tracking-wider mb-2">Your Name</label>
+              <input type="text" id="name" required class="px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-navy focus:ring-2 focus:ring-brand-navy/10 text-sm transition-all" placeholder="John Doe" />
+            </div>
+            <div class="flex flex-col">
+              <label for="phone" class="text-xs font-heading font-bold text-brand-navy uppercase tracking-wider mb-2">Phone Number</label>
+              <input type="tel" id="phone" required class="px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-navy focus:ring-2 focus:ring-brand-navy/10 text-sm transition-all" placeholder="(214) 555-0199" />
+            </div>
+          </div>
+          
+          <div class="flex flex-col">
+            <label for="email" class="text-xs font-heading font-bold text-brand-navy uppercase tracking-wider mb-2">Email Address</label>
+            <input type="email" id="email" required class="px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-navy focus:ring-2 focus:ring-brand-navy/10 text-sm transition-all" placeholder="john@example.com" />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="project-type" class="text-xs font-heading font-bold text-brand-navy uppercase tracking-wider mb-2">Project Type</label>
+            <select id="project-type" class="px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-navy focus:ring-2 focus:ring-brand-navy/10 text-sm transition-all bg-white">
+              <option value="residential">Residential Turf Installation</option>
+              <option value="pet">Pet-Safe Turf System</option>
+              <option value="putting-green">Custom Backyard Putting Green</option>
+              <option value="commercial">Commercial / Play Area Turf</option>
+            </select>
+          </div>
+
+          <button type="submit" id="submit-btn" class="w-full py-4 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-xl shadow-lg transition-colors">
+            Submit Estimate Request
+          </button>
+        </form>
+
+        <!-- Success Box -->
+        <div id="success-message" class="hidden text-center py-10 flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-brand-accent text-brand-navy flex items-center justify-center text-3xl mb-4 shadow-lg animate-bounce">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h3 class="text-brand-navy font-heading font-black text-2xl mb-2 uppercase">Request Received!</h3>
+          <p class="text-slate-600 text-sm max-w-sm mx-auto">
+            Thank you! A turf estimator will call you within 2 business hours to schedule your free on-site visit.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CURVED FOOTER BANNER ================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      <div class="bg-brand-navy text-white rounded-[30px] overflow-hidden relative min-h-[300px] flex items-center shadow-2xl border border-white/5">
+        
+        <!-- Background elements -->
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-sky/30 z-0"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-[45%] hidden md:block z-0">
+          <img src="before_after.png" alt="Tech laying turf" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="max-w-xl p-8 sm:p-12 relative z-10">
+          <h3 class="font-heading font-black text-3xl sm:text-4xl uppercase leading-tight mb-4">Secure Property Today With Professional Turf Experts</h3>
+          <p class="text-white/60 text-xs leading-relaxed mb-8">
+            Enjoy a flawless, green lawn all year round with zero water bills and zero mowing. Get your premium quote today.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="px-6 py-3 bg-brand-accent hover:bg-yellow-500 text-brand-navy font-heading font-extrabold rounded-full text-xs uppercase tracking-wider transition-colors shadow">Schedule Session</a>
+            <a href="tel:+12145550199" class="px-6 py-3 border border-white/20 hover:border-white/50 hover:bg-white/5 text-white font-heading font-extrabold rounded-full text-xs uppercase tracking-wider transition-all">Call Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer class="bg-brand-dark text-white/50 pt-20 pb-10 border-t border-white/5 relative z-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      
+      <!-- Col 1: About Brand -->
+      <div class="flex flex-col gap-6">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-accent flex items-center justify-center shadow-lg">
+            <i class="fa-solid fa-shield-halved text-brand-navy text-xl"></i>
+          </div>
+          <span class="text-white font-heading font-black text-2xl uppercase tracking-tight">TurfShield</span>
+        </a>
+        <p class="text-sm leading-relaxed">
+          Premium synthetic sod systems and backyard putting green landscaping. Professional installations backed by a 15-year warranty.
+        </p>
+        <div class="flex gap-3 text-lg">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-accent hover:text-brand-navy flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-accent hover:text-brand-navy flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-accent hover:text-brand-navy flex items-center justify-center transition-colors"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div>
+        <h4 class="text-white font-heading font-bold text-lg mb-6 uppercase">Quick Links</h4>
+        <ul class="space-y-4 text-sm font-semibold">
+          <li><a href="#" class="hover:text-brand-accent transition-colors">Home</a></li>
+          <li><a href="#about" class="hover:text-brand-accent transition-colors">About Us</a></li>
+          <li><a href="#services" class="hover:text-brand-accent transition-colors">Our Services</a></li>
+          <li><a href="#process" class="hover:text-brand-accent transition-colors">Our Process</a></li>
+          <li><a href="#gallery" class="hover:text-brand-accent transition-colors">Portfolio</a></li>
+          <li><a href="#reviews" class="hover:text-brand-accent transition-colors">Reviews</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact Us -->
+      <div>
+        <h4 class="text-white font-heading font-bold text-lg mb-6 uppercase">Contact Us</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-brand-accent mt-1"></i>
+            <div>
+              <span class="block text-xs font-bold text-white/40 uppercase">PHONE</span>
+              <a href="tel:+12145550199" class="text-white hover:text-brand-accent font-bold transition-colors">(214) 555-0199</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-brand-accent mt-1"></i>
+            <div>
+              <span class="block text-xs font-bold text-white/40 uppercase">EMAIL</span>
+              <a href="mailto:info@turfshield.com" class="text-white hover:text-brand-accent font-bold transition-colors">info@turfshield.com</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-brand-accent mt-1"></i>
+            <div>
+              <span class="block text-xs font-bold text-white/40 uppercase">OFFICE</span>
+              <span class="text-white font-bold leading-normal">1842 Greenfield Dr, Dallas, TX 75218</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Service Areas -->
+      <div>
+        <h4 class="text-white font-heading font-bold text-lg mb-6 uppercase">Locations</h4>
+        <ul class="space-y-2 text-sm font-semibold">
+          <li>Dallas Turf Installers</li>
+          <li>Fort Worth Sod Installers</li>
+          <li>Plano Artificial Grass</li>
+          <li>Frisco Putting Greens</li>
+          <li>McKinney Lawn Replacements</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Legal Bottom -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold">
+      <span>&copy; 2026 TurfShield solutions. All Rights Reserved.</span>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-brand-accent transition-colors">Terms &amp; Conditions</a>
+        <a href="#" class="hover:text-brand-accent transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Mobile Menu Drawer Control
+    const drawer = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const btnTop = document.getElementById('hamburger-top');
+    const btnMid = document.getElementById('hamburger-mid');
+    const btnBottom = document.getElementById('hamburger-bottom');
+
+    function toggleDrawer() {
+      const isOpen = !drawer.classList.contains('translate-x-full');
+      if (isOpen) {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+        btnTop.style.transform = 'none';
+        btnMid.style.opacity = '1';
+        btnBottom.style.transform = 'none';
+        document.body.style.overflow = '';
+      } else {
+        drawer.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        btnTop.style.transform = 'translateY(8px) rotate(45deg)';
+        btnMid.style.opacity = '0';
+        btnBottom.style.transform = 'translateY(-8px) rotate(-45deg)';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    document.getElementById('mobile-menu-btn').addEventListener('click', toggleDrawer);
+
+    // FAQ Accordion Toggle Logic
+    function toggleFaq(btn) {
+      const faqItem = btn.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all FAQs first
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('button span:last-child').style.transform = 'none';
+      });
+
+      if (!isActive) {
+        faqItem.classList.add('active');
+        btn.querySelector('button span:last-child').style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Form Submission Handling
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('lead-form');
+      const success = document.getElementById('success-message');
+      const submitBtn = document.getElementById('submit-btn');
+
+      // Set Loading state
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Submitting...';
+      submitBtn.disabled = true;
+
+      // Simulate API submit delay
+      setTimeout(() => {
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
